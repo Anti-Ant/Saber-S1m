@@ -1,13 +1,4 @@
 
-spawn(function())
-	_G.HumanoidRootPartAnchored = true;
-	while _G.HumanoidRootPartAnchored do
-		pcall(function()
-			game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
-		end)
-		wait()
-	end
-end)
 spawn(function()
 	repeat
 		wait(1)
