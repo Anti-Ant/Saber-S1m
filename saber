@@ -1,21 +1,7 @@
-
 spawn(function()
 	repeat
 		wait(1)
 		print("Waiting for roblox...")
-	until game.Players.LocalPlayer.PlayerGui.Gui.Home.Version.Text ~= "v1"
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Visible = true;
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Position = UDim2.new(0.5, 0, 0.5, 0)
-	task.wait(5)
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.PetsInventory.Visible = false;
-	task.wait(1)
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Visible = true;
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Position = UDim2.new(0.5, 0, 0.5, 0)
-	task.wait(5)
-	game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans.Visible = false;
-	task.wait(1)
-	local q = {
-		[1] = "Troll"
 	}
 	for e, f in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Submenus.Clans:GetChildren()) do
 		if f.Name == "NoClan" and f.Visible == true then
