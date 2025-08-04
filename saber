@@ -1,6 +1,3 @@
-getgenv().EggName1 = "D"
-getgenv().EggName2 = "NothingHere"
-
 local a;
 local b;
 httprequest = syn and syn.request or http_request or http.request;
